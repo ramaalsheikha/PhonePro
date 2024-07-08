@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PhonePro</string>
+    <string name="model">model</string>
+    <string name="brand">brand</string>
+    <string name="selectedmodellist">selectedModelList</string>
+</resources>

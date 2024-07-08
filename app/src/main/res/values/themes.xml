@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PhonePro" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/black</item>
+    </style>
+
+    <style name="Theme.PhonePro" parent="Base.Theme.PhonePro" />
+
+
+        <!-- Custom style for Toolbar -->
+        <style name="CustomToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+            <item name="actionMenuTextColor">@color/white</item>
+        </style>
+
+
+        <!-- Custom style for Popup Menu -->
+       <style name="CustomPopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+            <item name="android:textColor">@color/black</item>
+        </style>
+
+
+</resources>

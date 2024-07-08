@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/iphone"
+        android:title="iPhone"
+        app:showAsAction="never"
+        android:icon="@drawable/iphoneicon"
+       />
+    <item
+        android:id="@+id/samsung"
+        android:title="Samsung"
+        app:showAsAction="never"
+        android:icon="@drawable/samsungicon"
+       />
+    <item
+        android:id="@+id/google_pixel"
+        android:title="Google Pixel"
+        app:showAsAction="never"
+        android:icon="@drawable/googleicon"
+       />
+    <item
+        android:id="@+id/oppo"
+        android:title="Oppo"
+        app:showAsAction="never"
+        android:icon="@drawable/oppoicon"
+        />
+</menu>

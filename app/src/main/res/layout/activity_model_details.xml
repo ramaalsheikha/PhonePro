@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ModelDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/phoneImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/model_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/iphoneforteen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+       android:id="@+id/tv_model_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Iphone 14"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:text="$999"
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_model_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_model_name" />
+
+    <TextView
+        android:id="@+id/tv_model_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:text="  The iPhone 14 features a sleek design, powerful A15 Bionic chip, enhanced dual-camera system for stunning photos and videos, and improved battery life. It boasts a vibrant 6.1-inch Super Retina XDR display and runs on iOS 15, offering seamless performance and advanced features. Available in various colors and storage options, it combines innovation and style for an exceptional user experience."
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_model_name" />
+
+    <TextView
+        android:id="@+id/tv_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Available"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_model_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_model_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_model_description" />
+
+    <Spinner
+        android:id="@+id/sp_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_colors"
+        app:layout_constraintStart_toEndOf="@+id/tv_colors"
+        app:layout_constraintTop_toTopOf="@+id/tv_colors" />
+
+    <TextView
+        android:id="@+id/tv_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Storage :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_colors"
+        app:layout_constraintTop_toBottomOf="@+id/tv_colors" />
+
+    <RadioGroup
+        android:id="@+id/rg_storages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_storage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_storage"
+        android:orientation="horizontal"
+        app:layout_goneMarginTop="20dp"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/rb_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/storage_background"
+            android:button="@color/light_gray"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="500 GB"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp" />
+
+        <RadioButton
+            android:id="@+id/rb_storage_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/storage_background"
+            android:button="@color/light_gray"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="1 TB"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp" />
+        <RadioButton
+            android:id="@+id/rb_storage_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/storage_background"
+            android:button="@color/light_gray"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="2 TB"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+           />
+    </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="BUY"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg_storages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
