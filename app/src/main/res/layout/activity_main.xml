@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         app:menu="@menu/brands_menu"
+        app:title=""
         android:theme="@style/CustomToolbar"
         app:popupTheme="@style/CustomPopupMenu"
         app:layout_constraintEnd_toEndOf="parent"

@@ -2,33 +2,33 @@ package com.example.phonepro.domain
 
 import android.os.Parcel
 import android.os.Parcelable
-import java.io.Serializable
 
 data class ObjectModel(
-    val image:Int,
+    val image: Int,
     val modelName: String,
     val price: String,
-    val description:String,
-    ) :Parcelable {
+    val description: String,
+    val color: ArrayList<SpinnerObject>
+) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString().toString(),
         parcel.readString().toString(),
-        parcel.readString().toString()
-    ) {
-    }
+        parcel.readString().toString(),
+        parcel.createTypedArrayList(SpinnerObject.CREATOR) ?: arrayListOf()
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(image)
         parcel.writeString(modelName)
         parcel.writeString(price)
         parcel.writeString(description)
+        parcel.writeTypedList(color)
     }
 
     override fun describeContents(): Int {
         return 0
     }
-
     companion object CREATOR : Parcelable.Creator<ObjectModel> {
         override fun createFromParcel(parcel: Parcel): ObjectModel {
             return ObjectModel(parcel)
@@ -39,6 +39,3 @@ data class ObjectModel(
         }
     }
 }
-
-
-

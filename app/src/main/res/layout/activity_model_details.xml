@@ -112,7 +112,7 @@
         android:gravity="center">
 
         <RadioButton
-            android:id="@+id/rb_storage"
+            android:id="@+id/rb_500GB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/storage_background"
@@ -126,7 +126,20 @@
             android:layout_marginRight="10dp" />
 
         <RadioButton
-            android:id="@+id/rb_storage_two"
+            android:id="@+id/rb_1TB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/storage_background"
+            android:button="@color/light_gray"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="800 GB"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp" />
+        <RadioButton
+            android:id="@+id/rb_800GB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/storage_background"
@@ -134,19 +147,6 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="1 TB"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_marginRight="10dp" />
-        <RadioButton
-            android:id="@+id/rb_storage_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/storage_background"
-            android:button="@color/light_gray"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="2 TB"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"

@@ -9,7 +9,7 @@ import com.example.phonepro.R
 import com.example.phonepro.databinding.SpinnerItemBinding
 import com.example.phonepro.domain.SpinnerObject
 
-class PhonesColorAdapter(context: Context, colorsList: List<SpinnerObject>) :
+class PhonesColorAdapter(context: Context, colorsList: ArrayList<SpinnerObject>) :
     ArrayAdapter<SpinnerObject>(context, 0, colorsList) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -25,12 +25,13 @@ class PhonesColorAdapter(context: Context, colorsList: List<SpinnerObject>) :
         val inflater = LayoutInflater.from(parent.context)
         val binding = SpinnerItemBinding.inflate(inflater, parent, false)
         bind(binding, colorItem)
-
         return binding.root
     }
 
     private fun bind(spinnerItemBinding: SpinnerItemBinding, spinnerObject: SpinnerObject?) {
-        spinnerItemBinding.ivPhone.setImageResource(spinnerObject!!.image)
-        spinnerItemBinding.tvColorName.text = spinnerObject.colorText
+        spinnerObject?.let {
+            spinnerItemBinding.ivPhone.setImageResource(spinnerObject.image)
+            spinnerItemBinding.tvColorName.text = spinnerObject.colorText
+        }
     }
 }
