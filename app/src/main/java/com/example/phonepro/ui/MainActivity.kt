@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.tbMain)
         setDialog()
-
     }
 
     private fun setDialog() {

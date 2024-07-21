@@ -19,5 +19,12 @@
     <string name="place_order">PLACE ORDER</string>
     <string name="error_valid_name">please enter your name</string>
     <string name="error_valid_number">failed phone number</string>
+    <string name="enter_your_address">Enter your address</string>
+    <string name="error_valid_card_number">Please enter a valid card number</string>
+    <string name="error_valid_card_date">Please enter a valid card date</string>
+    <string name="error_valid_card_cvv">Please enter a valid card CVV</string>
+    <string name="customerinfo">customerInfo</string>
+    <string name="oreder_summary">Oreder Summary</string>
+    <string name="address">Address</string>
 
 </resources>

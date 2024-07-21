@@ -22,7 +22,7 @@ import com.example.phonepro.util.PhonesColorsAdapterTwo
 class ModelDetailsActivity : AppCompatActivity() {
     lateinit var binding: ActivityModelDetailsBinding
     lateinit var selectedModel: ObjectModel
-    lateinit var selectedColor: String
+    lateinit var selectedColor:String
     private var selectedStorage: String = null.toString()
     private val modelList: MutableList<String> = mutableListOf()
 
@@ -51,10 +51,10 @@ class ModelDetailsActivity : AppCompatActivity() {
     private fun initSpinnerAdapter(selectedModel: ObjectModel) {
         val myAdapter = PhonesColorsAdapterTwo(this, selectedModel.color)
         binding.spColors.adapter = myAdapter
-        getSelectedColor()
+      //  getSelectedColor()
     }
 
-    private fun getSelectedColor() {
+ /*   private fun getSelectedColor() {
         binding.spColors.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -62,8 +62,15 @@ class ModelDetailsActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                selectedColor = selectedModel.color[position].colorText
-                Log.i("SelectedColor", "Color selected: $selectedColor")
+               // selectedColor = selectedModel.color[position].colorText
+
+               /* val selectedItem = parent?.getItemAtPosition(position) as SpinnerObject
+                selectedColor = selectedItem.colorText*/
+
+
+
+
+              Log.i("SelectedColor", "Color selected: $selectedColor")
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -75,7 +82,7 @@ class ModelDetailsActivity : AppCompatActivity() {
                 ).show()
             }
         }
-    }
+    }*/
 
     private fun getSelectedStorage() {
         val storageList = listOf<RadioButton>(binding.rb500GB, binding.rb800GB, binding.rb1TB)
@@ -101,6 +108,8 @@ class ModelDetailsActivity : AppCompatActivity() {
     }
 
     private fun colorAndStorageValidation(): Boolean {
+        val selectedItem = binding.spColors.selectedItem as SpinnerObject
+        selectedColor = selectedItem.colorText
         var isVal = true
         if (selectedStorage == "null") {
             Toast.makeText(this, "Please select storage", Toast.LENGTH_LONG).show()
